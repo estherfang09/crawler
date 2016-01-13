@@ -1,2 +1,3 @@
 # crawler
-Using Baidu search-engine to extract alias-fullname pairs
+Downloads Extraction from Baidu Search Engine.
+Change current Proxy if it losts its connection
