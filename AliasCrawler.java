@@ -53,14 +53,7 @@ public class AliasCrawler {
 	ArrayList<String> patternArr = null;
 	ArrayList<String> absPathArr = null;
 
-	// public AliasCrawler(String ptt, String absPath) {
-	// patternArr = new ArrayList<String>();
-	// absPathArr = new ArrayList<String>();
-	// ptt = ptt.replace("<full>", "");
-	// ptt = ptt.replace("<alias>", "");
-	// patternArr.add(ptt);
-	// absPathArr.add(absPath);
-	// }
+
 	ArrayList<String> absPathtest = null;
 
 	public AliasCrawler(String ptFilePath) throws Exception {
@@ -89,28 +82,13 @@ public class AliasCrawler {
 	public static void main(String[] args) throws Exception {
 		AliasCrawler ac = new AliasCrawler(
 				"/Users/esther/Desktop/untitled folder 3/test_aliasMining/pt123.txt");
-		// AliasCrawler ac = new AliasCrawler(
-		// "/home/rsvp/Desktop/test_aliasMining/pt123.txt");
-		// AliasCrawler ac = new AliasCrawler(
-		// "/home/rsvp/Desktop/test_aliasMining/pt123.txt");
-		// String nameListPath = "/home/rsvp/Desktop/test_aliasMining/uPeking";
-		// // ac.fechAbstract(nameListPath);
-		//
-		// ac.findAliases(nameListPath,
-		// "/home/rsvp/Desktop/test_aliasMining/alias_dir", 5, true,
-		// false, false);
-		// AliasCrawler ac = new AliasCrawler(
-		// "/Users/esther/Desktop/test_aliasMining/pt123.txt");
+	
 		String nameListPath = "/Users/esther/Desktop/untitled folder 3/beijing/airports_list";
 		ac.findAliasesOneFile(
 				nameListPath,
 				"/Users/esther/Desktop/untitled folder 3/test_aliasMining/140915.txt",
 				10, true);
-		// System.out.println( SmallTools.judge("中国传媒大学外号北京广播学院许多人士都出自那里",
-		// "中国传媒大学外号北京广播", "中国传媒大学"));
-		// String text = "北京大学（北大";
-		// String del = "（";
-		// System.out.println(text.indexOf(del));
+	
 	}
 
 	public void fechAbstract(String nameListPath) throws Exception {
@@ -631,11 +609,7 @@ public class AliasCrawler {
 		for (int i = 0; i < patternArr.size(); i++) {
 			for (String Full : names) {
 				String pattern = patternArr.get(i);
-				// pattern = Pattern.quote(pattern);
-				// pattern = pattern.replace("(", "\\(");
 
-//				 List<String> reset = extractAliases(absPathArr.get(i), Full,
-//				 pattern);x
 				List<String> reset = extractAliases(
 						"/Users/esther/Desktop/untitled folder 3/beijing/机场简称.json",
 						Full, pattern);
